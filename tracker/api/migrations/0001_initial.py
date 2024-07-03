@@ -48,14 +48,14 @@ class Migration(migrations.Migration):
                 ('date', models.DateField()),
                 ('description', models.TextField(blank=True, null=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('account', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.account')),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.category')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.user')),
+                ('account', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.account')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.category')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.user')),
             ],
         ),
         migrations.AddField(
             model_name='account',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.user'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.user'),
         ),
     ]
