@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { render } from 'react-dom';
+import { createRoot } from "react-dom/client";
 
 export default class App extends Component {
   constructor(props) {
@@ -7,10 +7,10 @@ export default class App extends Component {
   }
 
   render() {
-    return <h1>Testink react code</h1>;
+    return <h1>Testing react code</h1>;
   }
 }
 
-
-const appDiv = document.getElementById("app")
-render(<App />, appDiv);
+const appDiv = document.getElementById("app");
+const root = createRoot(appDiv);
+root.render(<App />);
